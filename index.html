@@ -640,5 +640,22 @@
       </div>
     </footer>
   </div>
+<!-- Password Gate -->
+<div id="gate" style="position:fixed;inset:0;background:#0a0f1e;display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;gap:16px;">
+  <p style="color:#e8eeff;font-family:sans-serif;font-size:14px;letter-spacing:3px;">ENTER PASSWORD</p>
+  <input id="pw" type="password" style="padding:12px 20px;font-size:16px;border:1px solid rgba(255,255,255,0.2);background:transparent;color:#fff;outline:none;border-radius:4px;" placeholder="••••••••" />
+  <button onclick="checkPW()" style="padding:12px 32px;background:#2dd4bf;color:#060a14;font-size:13px;letter-spacing:2px;border:none;cursor:pointer;border-radius:4px;">ENTER</button>
+  <p id="err" style="color:red;font-size:13px;display:none;">Incorrect password</p>
+</div>
+<script>
+  if(sessionStorage.getItem('unlocked')==='yes'){document.getElementById('gate').style.display='none';}
+  function checkPW(){
+    if(document.getElementById('pw').value==='qwerty8691!$'){
+      sessionStorage.setItem('unlocked','yes');
+      document.getElementById('gate').style.display='none';
+    } else { document.getElementById('err').style.display='block'; }
+  }
+  document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')checkPW();});
+</script>  
 </body>
 </html>
