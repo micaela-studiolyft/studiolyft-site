@@ -20,7 +20,6 @@
       --text-muted: #a5a7b4;
       --text-soft: #6c6f7c;
       --text-contrast: #050608;
-
       --accent-teal: #25d0c3;
       --accent-teal-soft: rgba(37,208,195,0.12);
       --accent-gold: #f6bf4b;
@@ -29,19 +28,15 @@
       --accent-rose-soft: rgba(255,107,156,0.16);
       --accent-violet: #8f7dff;
       --accent-violet-soft: rgba(143,125,255,0.18);
-
       --radius-sm: 6px;
       --radius-md: 10px;
       --radius-lg: 18px;
       --radius-xl: 26px;
       --radius-full: 999px;
-
       --shadow-soft: 0 18px 45px rgba(0,0,0,0.50);
       --shadow-subtle: 0 10px 30px rgba(0,0,0,0.35);
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       min-height: 100vh;
@@ -50,492 +45,105 @@
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
     }
-
-    .page-shell {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 32px 20px 56px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 32px;
-    }
-
-    .brand-mark {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
+    .page-shell { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+    .brand-mark { display: flex; align-items: center; gap: 10px; }
     .brand-logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 11px;
-      background:
-        radial-gradient(circle at 15% 15%, rgba(37,208,195,0.7), transparent 55%),
-        radial-gradient(circle at 85% 20%, rgba(246,191,75,0.65), transparent 55%),
-        radial-gradient(circle at 20% 85%, rgba(143,125,255,0.60), transparent 55%),
-        #05070b;
-      border: 1px solid rgba(255,255,255,0.16);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
+      width: 32px; height: 32px; border-radius: 11px;
+      background: radial-gradient(circle at 15% 15%, rgba(37,208,195,0.7), transparent 55%), radial-gradient(circle at 85% 20%, rgba(246,191,75,0.65), transparent 55%), radial-gradient(circle at 20% 85%, rgba(143,125,255,0.60), transparent 55%), #05070b;
+      border: 1px solid rgba(255,255,255,0.16); box-shadow: 0 10px 28px rgba(0,0,0,0.7);
+      display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
     }
-
-    .brand-logo::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      border: 1px solid rgba(255,255,255,0.32);
-      opacity: 0.3;
-      mix-blend-mode: screen;
-    }
-
-    .brand-logo span {
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: #070709;
-      text-shadow: 0 0 14px rgba(255,255,255,0.75);
-    }
-
-    .brand-text-main {
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 11px;
-    }
-
-    .brand-text-sub {
-      font-size: 11px;
-      color: var(--text-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-    }
-
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-pill {
-      padding: 4px 10px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(9,11,17,0.9);
-      color: var(--text-muted);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .nav-pill strong {
-      color: var(--accent-teal);
-      font-weight: 600;
-    }
-
-    .nav-waitlist {
-      padding: 7px 14px;
-      border-radius: var(--radius-full);
-      border: none;
-      font-size: 12px;
-      font-weight: 500;
-      background: linear-gradient(120deg,var(--accent-teal),#6be3c8);
-      color: var(--text-contrast);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.7);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      white-space: nowrap;
-    }
-
-    .nav-waitlist span.icon {
-      display:inline-flex;
-      font-size:14px;
-    }
-
-    main {
-      display: grid;
-      grid-template-columns: minmax(0,1.4fr) minmax(0,1.1fr);
-      gap: 28px;
-      align-items: flex-start;
-    }
-
+    .brand-logo::before { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 1px solid rgba(255,255,255,0.32); opacity: 0.3; mix-blend-mode: screen; }
+    .brand-logo span { font-size: 17px; font-weight: 700; letter-spacing: 0.04em; color: #070709; text-shadow: 0 0 14px rgba(255,255,255,0.75); }
+    .brand-text-main { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px; }
+    .brand-text-sub { font-size: 11px; color: var(--text-soft); text-transform: uppercase; letter-spacing: 0.16em; }
+    .nav-cta { display: flex; align-items: center; gap: 10px; }
+    .nav-pill { padding: 4px 10px; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.12); background: rgba(9,11,17,0.9); color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; }
+    .nav-pill strong { color: var(--accent-teal); font-weight: 600; }
+    .nav-waitlist { padding: 7px 14px; border-radius: var(--radius-full); border: none; font-size: 12px; font-weight: 500; background: linear-gradient(120deg,var(--accent-teal),#6be3c8); color: var(--text-contrast); box-shadow: 0 10px 26px rgba(0,0,0,0.7); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .nav-waitlist span.icon { display:inline-flex; font-size:14px; }
+    main { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1.1fr); gap: 28px; align-items: flex-start; }
     @media (max-width: 880px) {
-      main {
-        grid-template-columns: minmax(0,1fr);
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-cta {
-        align-self: stretch;
-        justify-content: space-between;
-      }
+      main { grid-template-columns: minmax(0,1fr); }
+      header { flex-direction: column; align-items: flex-start; }
+      .nav-cta { align-self: stretch; justify-content: space-between; }
     }
-
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(9,11,17,0.92);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-soft);
-      margin-bottom: 14px;
-    }
-
-    .hero-eyebrow-badge {
-      padding: 3px 8px;
-      border-radius: var(--radius-full);
-      background: rgba(37,208,195,0.12);
-      color: var(--accent-teal);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-    }
-
-    .hero-heading {
-      font-family: 'Instrument Serif', 'Times New Roman', serif;
-      font-size: 38px;
-      line-height: 1.08;
-      letter-spacing: 0.01em;
-      margin: 0 0 10px;
-    }
-
-    .hero-heading span.highlight {
-      color: var(--accent-teal);
-    }
-
-    .hero-subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
-      max-width: 34rem;
-      margin-bottom: 18px;
-    }
-
-    .hero-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 22px;
-    }
-
-    .metric-pill {
-      padding: 7px 11px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(9,11,18,0.92);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    .metric-pill strong {
-      color: var(--accent-gold);
-      font-weight: 600;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .hero-primary {
-      padding: 9px 16px;
-      border-radius: var(--radius-full);
-      border: none;
-      background: linear-gradient(130deg,var(--accent-gold),#ffd48b);
-      color: #1b1207;
-      font-size: 13px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      box-shadow: 0 16px 36px rgba(0,0,0,0.75);
-    }
-
-    .hero-primary span.icon {
-      font-size: 15px;
-    }
-
-    .hero-secondary {
-      padding: 9px 14px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(7,9,14,0.9);
-      color: var(--text-main);
-      font-size: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      cursor: pointer;
-    }
-
-    .hero-secondary-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent-rose);
-      box-shadow: 0 0 6px rgba(255,107,156,0.9);
-    }
-
-    .hero-footnote {
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    .hero-footnote strong {
-      color: var(--accent-teal);
-      font-weight: 500;
-    }
-
-    .hero-footnote span.dot {
-      margin: 0 6px;
-      opacity: 0.35;
-    }
-
-    .card-right {
-      background: linear-gradient(145deg,var(--bg-elevated),#05070b);
-      border-radius: var(--radius-xl);
-      padding: 18px 18px 16px;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: var(--shadow-subtle);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-right::before {
-      content: "";
-      position: absolute;
-      inset: -20%;
-      background:
-        radial-gradient(circle at 10% 0%, rgba(37,208,195,0.28), transparent 60%),
-        radial-gradient(circle at 95% 15%, rgba(246,191,75,0.25), transparent 60%),
-        radial-gradient(circle at 20% 95%, rgba(143,125,255,0.22), transparent 60%);
-      opacity: 0.65;
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-
-    .card-right-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    .waitlist-tag {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-soft);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .waitlist-tag span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent-teal);
-      box-shadow: 0 0 8px rgba(37,208,195,0.7);
-    }
-
-    .waitlist-card {
-      background: rgba(6,8,13,0.9);
-      border-radius: var(--radius-lg);
-      padding: 14px 14px 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: var(--shadow-soft);
-      margin-bottom: 14px;
-    }
-
-    .waitlist-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .waitlist-email {
-      flex: 1 1 150px;
-      min-width: 0;
-      background: rgba(10,13,20,0.86);
-      border-radius: var(--radius-full);
-      padding: 8px 10px;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      border: 1px solid var(--border-subtle);
-    }
-
-    .waitlist-email input {
-      background: transparent;
-      border: none;
-      outline: none;
-      color: var(--text-main);
-      font-size: 12px;
-      width: 100%;
-    }
-
-    .waitlist-email input::placeholder {
-      color: var(--text-soft);
-    }
-
-    .waitlist-submit {
-      padding: 8px 14px;
-      border-radius: var(--radius-full);
-      border: none;
-      background: linear-gradient(125deg,var(--accent-teal),#62e1c6);
-      color: var(--text-contrast);
-      font-size: 12px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .waitlist-submit span.icon {
-      font-size: 14px;
-    }
-
-    .waitlist-footnote {
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    .waitlist-footnote strong {
-      color: var(--accent-rose);
-      font-weight: 500;
-    }
-
-    .os-strip {
-      margin-top: 18px;
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(6,8,13,0.9);
-      padding: 10px 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .os-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(255,255,255,0.10);
-      font-size: 11px;
-      color: var(--text-muted);
-      background: rgba(10,12,18,0.9);
-    }
-
-    .os-pill span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent-violet);
-      box-shadow: 0 0 8px rgba(143,125,255,0.9);
-    }
-
-    .os-pill strong {
-      color: var(--accent-teal);
-      font-weight: 500;
-    }
-
-    .os-miniline {
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    footer {
-      margin-top: 34px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    footer .left {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    footer .pill {
-      padding: 4px 9px;
-      border-radius: var(--radius-full);
-      background: rgba(10,12,18,0.9);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    footer .right {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
-    footer a {
-      color: var(--text-soft);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: var(--accent-teal);
-    }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 4px 10px; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.12); background: rgba(9,11,17,0.92); font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); margin-bottom: 14px; }
+    .hero-eyebrow-badge { padding: 3px 8px; border-radius: var(--radius-full); background: rgba(37,208,195,0.12); color: var(--accent-teal); font-size: 10px; letter-spacing: 0.18em; }
+    .hero-heading { font-family: 'Instrument Serif', 'Times New Roman', serif; font-size: 38px; line-height: 1.08; letter-spacing: 0.01em; margin: 0 0 10px; }
+    .hero-heading span.highlight { color: var(--accent-teal); }
+    .hero-subtitle { font-size: 13px; color: var(--text-muted); max-width: 34rem; margin-bottom: 18px; }
+    .hero-metrics { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 22px; }
+    .metric-pill { padding: 7px 11px; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.08); background: rgba(9,11,18,0.92); display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-soft); }
+    .metric-pill strong { color: var(--accent-gold); font-weight: 600; }
+    .hero-cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .hero-primary { padding: 9px 16px; border-radius: var(--radius-full); border: none; background: linear-gradient(130deg,var(--accent-gold),#ffd48b); color: #1b1207; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; box-shadow: 0 16px 36px rgba(0,0,0,0.75); }
+    .hero-primary span.icon { font-size: 15px; }
+    .hero-secondary { padding: 9px 14px; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.16); background: rgba(7,9,14,0.9); color: var(--text-main); font-size: 12px; display: inline-flex; align-items: center; gap: 7px; cursor: pointer; }
+    .hero-secondary-dot { width: 6px; height: 6px; border-radius: 999px; background: var(--accent-rose); box-shadow: 0 0 6px rgba(255,107,156,0.9); }
+    .hero-footnote { font-size: 11px; color: var(--text-soft); }
+    .hero-footnote strong { color: var(--accent-teal); font-weight: 500; }
+    .hero-footnote span.dot { margin: 0 6px; opacity: 0.35; }
+    .card-right { background: linear-gradient(145deg,var(--bg-elevated),#05070b); border-radius: var(--radius-xl); padding: 18px 18px 16px; border: 1px solid rgba(255,255,255,0.08); box-shadow: var(--shadow-subtle); position: relative; overflow: hidden; }
+    .card-right::before { content: ""; position: absolute; inset: -20%; background: radial-gradient(circle at 10% 0%, rgba(37,208,195,0.28), transparent 60%), radial-gradient(circle at 95% 15%, rgba(246,191,75,0.25), transparent 60%), radial-gradient(circle at 20% 95%, rgba(143,125,255,0.22), transparent 60%); opacity: 0.65; mix-blend-mode: screen; pointer-events: none; }
+    .card-right-inner { position: relative; z-index: 1; }
+    .waitlist-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .waitlist-tag span.dot { width: 6px; height: 6px; border-radius: 999px; background: var(--accent-teal); box-shadow: 0 0 8px rgba(37,208,195,0.7); }
+    .waitlist-card { background: rgba(6,8,13,0.9); border-radius: var(--radius-lg); padding: 14px 14px 12px; border: 1px solid rgba(255,255,255,0.12); box-shadow: var(--shadow-soft); margin-bottom: 14px; }
+    .waitlist-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+    .waitlist-email { flex: 1 1 150px; min-width: 0; background: rgba(10,13,20,0.86); border-radius: var(--radius-full); padding: 8px 10px; display: flex; align-items: center; gap: 7px; border: 1px solid var(--border-subtle); }
+    .waitlist-email input { background: transparent; border: none; outline: none; color: var(--text-main); font-size: 12px; width: 100%; }
+    .waitlist-email input::placeholder { color: var(--text-soft); }
+    .waitlist-submit { padding: 8px 14px; border-radius: var(--radius-full); border: none; background: linear-gradient(125deg,var(--accent-teal),#62e1c6); color: var(--text-contrast); font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; white-space: nowrap; }
+    .waitlist-submit span.icon { font-size: 14px; }
+    .waitlist-footnote { font-size: 11px; color: var(--text-soft); }
+    .waitlist-footnote strong { color: var(--accent-rose); font-weight: 500; }
+    .os-strip { margin-top: 18px; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.14); background: rgba(6,8,13,0.9); padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .os-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.10); font-size: 11px; color: var(--text-muted); background: rgba(10,12,18,0.9); }
+    .os-pill span.dot { width: 6px; height: 6px; border-radius: 999px; background: var(--accent-violet); box-shadow: 0 0 8px rgba(143,125,255,0.9); }
+    .os-pill strong { color: var(--accent-teal); font-weight: 500; }
+    .os-miniline { font-size: 11px; color: var(--text-soft); }
+    footer { margin-top: 34px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; font-size: 11px; color: var(--text-soft); }
+    footer .left { display: flex; gap: 8px; align-items: center; }
+    footer .pill { padding: 4px 9px; border-radius: var(--radius-full); background: rgba(10,12,18,0.9); border: 1px solid rgba(255,255,255,0.08); }
+    footer .right { display: flex; gap: 12px; align-items: center; }
+    footer a { color: var(--text-soft); text-decoration: none; }
+    footer a:hover { color: var(--accent-teal); }
   </style>
 </head>
 <body>
+
+<!-- Password Gate -->
+<div id="gate" style="position:fixed;inset:0;background:#050608;display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;gap:16px;">
+  <p style="color:#e8eeff;font-family:sans-serif;font-size:14px;letter-spacing:3px;margin:0;">ENTER PASSWORD</p>
+  <input id="pw" type="password" style="padding:12px 20px;font-size:16px;border:1px solid rgba(255,255,255,0.2);background:transparent;color:#fff;outline:none;border-radius:999px;" placeholder="••••••••" />
+  <button onclick="checkPW()" style="padding:12px 32px;background:#25d0c3;color:#050608;font-size:13px;letter-spacing:2px;border:none;cursor:pointer;border-radius:999px;font-weight:600;">ENTER</button>
+  <p id="err" style="color:#ff6b9c;font-size:13px;display:none;margin:0;">Incorrect password</p>
+</div>
+<script>
+  if(sessionStorage.getItem('unlocked')==='yes'){document.getElementById('gate').style.display='none';}
+  function checkPW(){
+    if(document.getElementById('pw').value==='YOURPASSWORD'){
+      sessionStorage.setItem('unlocked','yes');
+      document.getElementById('gate').style.display='none';
+    } else { document.getElementById('err').style.display='block'; }
+  }
+  document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')checkPW();});
+</script>
+
   <div class="page-shell">
     <header>
       <div class="brand-mark">
-        <div class="brand-logo">
-          <span>SL</span>
-        </div>
+        <div class="brand-logo"><span>SL</span></div>
         <div>
           <div class="brand-text-main">STUDIOLYFT</div>
           <div class="brand-text-sub">AI OPERATING SYSTEM</div>
         </div>
       </div>
       <div class="nav-cta">
-        <div class="nav-pill">
-          <span>Built for</span> <strong>studio operators</strong>
-        </div>
-        <button class="nav-waitlist">
-          <span class="icon">⚡</span>
-          Join early access
-        </button>
+        <div class="nav-pill"><span>Built for</span> <strong>studio operators</strong></div>
+        <button class="nav-waitlist"><span class="icon">⚡</span>Join early access</button>
       </div>
     </header>
 
@@ -545,44 +153,17 @@
           <span class="hero-eyebrow-badge">NEW</span>
           AI layer that sits on top of your existing studio software
         </div>
-
-        <h1 class="hero-heading">
-          The AI operating system for
-          <span class="highlight">boutique fitness studios.</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          Studiolyft plugs into the tools you already use to watch every class,
-          client and time slot — then quietly executes the follow‑up, offers and
-          outreach a great operator would handle by hand.
-        </p>
-
+        <h1 class="hero-heading">The AI operating system for <span class="highlight">boutique fitness studios.</span></h1>
+        <p class="hero-subtitle">Studiolyft plugs into the tools you already use to watch every class, client and time slot — then quietly executes the follow‑up, offers and outreach a great operator would handle by hand.</p>
         <div class="hero-metrics">
-          <div class="metric-pill">
-            <strong>Retention playbooks</strong>
-            <span>for at‑risk clients &amp; high‑value members</span>
-          </div>
-          <div class="metric-pill">
-            <strong>Smart promotions</strong>
-            <span>for under‑filled classes &amp; dead zones</span>
-          </div>
-          <div class="metric-pill">
-            <strong>Local intelligence</strong>
-            <span>on competitors, pricing &amp; social trends</span>
-          </div>
+          <div class="metric-pill"><strong>Retention playbooks</strong><span>for at‑risk clients &amp; high‑value members</span></div>
+          <div class="metric-pill"><strong>Smart promotions</strong><span>for under‑filled classes &amp; dead zones</span></div>
+          <div class="metric-pill"><strong>Local intelligence</strong><span>on competitors, pricing &amp; social trends</span></div>
         </div>
-
         <div class="hero-cta-row">
-          <button class="hero-primary">
-            Get on the waitlist
-            <span class="icon">→</span>
-          </button>
-          <button class="hero-secondary">
-            <span class="hero-secondary-dot"></span>
-            See how the OS works
-          </button>
+          <button class="hero-primary">Get on the waitlist <span class="icon">→</span></button>
+          <button class="hero-secondary"><span class="hero-secondary-dot"></span>See how the OS works</button>
         </div>
-
         <div class="hero-footnote">
           <strong>Stay on your current booking software.</strong>
           <span class="dot">•</span>
@@ -592,38 +173,20 @@
 
       <aside class="card-right">
         <div class="card-right-inner">
-          <div class="waitlist-tag">
-            <span class="dot"></span>
-            Private beta for Pilates, yoga &amp; barre studios
-          </div>
-
+          <div class="waitlist-tag"><span class="dot"></span>Private beta for Pilates, yoga &amp; barre studios</div>
           <div class="waitlist-card">
             <div class="waitlist-row">
               <div class="waitlist-email">
                 <span style="font-size:14px;opacity:0.6;">@</span>
                 <input type="email" placeholder="Your best studio email">
               </div>
-              <button class="waitlist-submit">
-                Request invite
-                <span class="icon">↗</span>
-              </button>
+              <button class="waitlist-submit">Request invite <span class="icon">↗</span></button>
             </div>
-            <div class="waitlist-footnote">
-              <strong>Limited seats.</strong> We’re onboarding a small group of operators
-              to co‑design the OS that actually matches how studios run.
-            </div>
+            <div class="waitlist-footnote"><strong>Limited seats.</strong> We're onboarding a small group of operators to co‑design the OS that actually matches how studios run.</div>
           </div>
-
           <div class="os-strip">
-            <div class="os-pill">
-              <span class="dot"></span>
-              <span>
-                Works alongside <strong>Mariana Tek, Mindbody, ClassPass</strong> &amp; more
-              </span>
-            </div>
-            <div class="os-miniline">
-              No migrations. No new front desk system. Just better signals & actions every week.
-            </div>
+            <div class="os-pill"><span class="dot"></span><span>Works alongside <strong>Mariana Tek, Mindbody, ClassPass</strong> &amp; more</span></div>
+            <div class="os-miniline">No migrations. No new front desk system. Just better signals & actions every week.</div>
           </div>
         </div>
       </aside>
@@ -640,22 +203,5 @@
       </div>
     </footer>
   </div>
-<!-- Password Gate -->
-<div id="gate" style="position:fixed;inset:0;background:#0a0f1e;display:flex;align-items:center;justify-content:center;z-index:99999;flex-direction:column;gap:16px;">
-  <p style="color:#e8eeff;font-family:sans-serif;font-size:14px;letter-spacing:3px;">ENTER PASSWORD</p>
-  <input id="pw" type="password" style="padding:12px 20px;font-size:16px;border:1px solid rgba(255,255,255,0.2);background:transparent;color:#fff;outline:none;border-radius:4px;" placeholder="••••••••" />
-  <button onclick="checkPW()" style="padding:12px 32px;background:#2dd4bf;color:#060a14;font-size:13px;letter-spacing:2px;border:none;cursor:pointer;border-radius:4px;">ENTER</button>
-  <p id="err" style="color:red;font-size:13px;display:none;">Incorrect password</p>
-</div>
-<script>
-  if(sessionStorage.getItem('unlocked')==='yes'){document.getElementById('gate').style.display='none';}
-  function checkPW(){
-    if(document.getElementById('pw').value==='qwerty8691!$'){
-      sessionStorage.setItem('unlocked','yes');
-      document.getElementById('gate').style.display='none';
-    } else { document.getElementById('err').style.display='block'; }
-  }
-  document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')checkPW();});
-</script>  
 </body>
 </html>
